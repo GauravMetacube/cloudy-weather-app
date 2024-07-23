@@ -116,6 +116,7 @@ a{
     color: rgb(122,127,139)
 }
 .feature-container-heading h1{
+    padding-top: 20%;
     font-size: 2em;
     color: #557ef8;
 }
