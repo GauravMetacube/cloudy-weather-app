@@ -1,3 +1,4 @@
+ /* changing default setting */
 *{
     box-sizing: border-box;
 }
@@ -6,6 +7,8 @@ body{
     padding: 0;
     font-family: 'Roboto';
 }
+
+/* defining header style */
 
 #header{
     background-image: url(files/homebg.png);
@@ -37,6 +40,7 @@ a{
     color: white;
 }
 
+ /* hero section styling */
 .middle-container{
     margin-top: 10px;
     margin-left: 15%;
@@ -91,6 +95,7 @@ a{
     background-color: #4563c5;
 }
 
+/* feature section styling */
 #feauture-section{
     margin-top: 40px;
 }
@@ -158,50 +163,58 @@ a{
     transform: scale(0.9,0.9);
 }
 
+/* sliding section styling */
+
+
 .feature-slide-container{
+    overflow: hidden;
     display: flex;
     justify-content: center;
-    position: relative;
-    width: 90%;
-    overflow: hidden;
-    margin-top: 100px;
+    width: 80%;
+    margin: 2% auto;
+
+}
+.feature-slide-content{
+    border: 1px hidden rgb(247, 231, 231);
+    box-shadow: 0 0 5px 5px rgba(243,243,243,255);
+    height: 90%;
 }
 
-
-#drag1{
-    position:relative;
-    transform: perspective(700px) translateX(-60px) skewY(-2deg) scale(0.85,0.85);
-    border: 1px solid rgb(247, 231, 231);
-    box-shadow: 0 10px 10px rgb(247, 231, 231,0.2);
-    z-index: 100d;
-}
-#drag2{
-    position: relative;
-    transform: translateY(-75px) scale(0.86,0.86);
-    border: 1px solid rgb(247, 231, 231);
-    box-shadow: 0 10px 10px rgb(247, 231, 231,0.2);
-    z-index: 1000;
-}
-#drag3{
+.drag1-container{
     
-    transform: perspective(700px) translateX(60px) skewY(2deg) scale(0.85,0.85);
-    border: 1px solid rgb(247, 231, 231);
-    box-shadow: 0 10px 10px rgb(247, 231, 231,0.2);
+    transform: perspective(1000px) translate(240px,50px) scaleX(0.7) scaleY(0.7) rotateY(20deg);
     
 }
-#drag4{
-    transform: translateX(140px) skewY(5deg) scale(0.7,0.7);
-    border: 1px solid rgb(247, 231, 231);
-    box-shadow: 0 10px 10px rgb(247, 231, 231,0.2);
 
-}
-#drag5{
-    transform: translateX(-140px) skewY(-5deg) scale(0.7,0.7);
-    border: 1px solid rgb(247, 231, 231);
-    box-shadow: 0 10px 10px rgb(247, 231, 231,0.2);
+.drag2-container{
+    /* position: absolute; */
+    
+    transform: perspective(1000px) translate(85px,50px) scaleX(0.8) scaleY(0.8) rotateY(15deg);
+    /* left: 368px; */
+    
 }
 
+.drag3-container{
+    /* position: absolute; */
+    transform: perspective(1000px) scale(0.85,0.85) ;
+    /* left: 575px; */
+}
 
+.drag4-container{
+    /* position: absolute; */
+    transform:perspective(1000px) translate(-85px,50px) scaleX(0.8) scaleY(0.7) rotateY(-15deg);
+    /* left: 781px; */
+    z-index: -1;
+}
+
+.drag5-container{
+    /* position: absolute; */
+    transform: perspective(1000px) translate(-240px,50px) scaleX(0.7) scaleY(0.6) rotateY(-20deg);
+    /* left: 957px; */
+    z-index: -2;
+   
+}
+/* screenshot section styling */
 .screenshot-container-title h1{
     font-size: 2.4em;
     color: #557ef8;
@@ -217,24 +230,64 @@ a{
 .screenshot-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: center; /*change it for responsiveness */
 }
 
 .screenshot-container-item{
     display: flex;
     align-items: center;
-    gap: 10%;
-    margin:auto 22.5%;
+    margin:0 20%;
+    margin-right: 12%;
+    margin-bottom: -10%;
 }
 
 .screenshot-container-item.reverse{ 
     flex-direction: row-reverse;
+    margin-right:5%;
+    margin-left:15%;
 }
 
+.reverse .screenshot-content{
+    margin-left: 10%;
+}
+.screenshot-content.cloud-content{
+    margin-right: -12%;
+}
+.screenshot-content-text{
+    margin-bottom: 25%;
+}
+.screenshot-content-text{
+    font-size:1.2em;
+    word-spacing: 1.5px;
+}
+.screenshot-content-text p{
+    font-size: 1.2em;
+}
 .screenshot-container-item .screen{
     transform: scale(0.8,0.8);
 }
+.screenshot-content .bg-text{
+    position: relative;
+    font-size: 11em;
+    color:rgb(122,127,137,0.4);
+    font-weight: 350;
+    z-index: -1;
+}
 
+.screenshot-content .cloudy-text{
+    transform: rotateZ(90deg) translateY(-10px) translateX(-410px);
+}
+
+.screenshot-content .sunny-text{
+    transform: rotateZ(90deg) translateY(-40px) translateX(-440px);
+}
+
+.screenshot-content .rainy-text{
+    transform: rotateZ(90deg) translateY(-65px) translateX(-420px);
+}
+
+/* review section styling */
 .review-container-title h1{
     font-size: 2em;
     color: #557ef8;
@@ -264,6 +317,8 @@ a{
 .review-author{
     margin-top: -0.5em;
 }
+
+/* download-section styling */
 #download-section{
     background-color: #557ef8;
     position: relative;
@@ -309,6 +364,7 @@ a{
    width: 14%;
 }
 
+/* footer styling */
 footer{
     background-color: rgba(56,58,83,255);
     padding-bottom: 1%;
